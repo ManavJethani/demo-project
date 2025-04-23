@@ -1,0 +1,19 @@
+import React from 'react';
+import './Login.css'; // Import CSS file for styling
+
+function Dashboard() {
+    
+    const handleLogout = () => {
+        localStorage.removeItem('token'); // Clear token
+        window.location.href = '/login'; // Redirect to login
+    };
+
+    return (
+        <div className='login-container' style={{width: '700px'}}>
+            <h1>Welcome to the Dashboard</h1>
+            <button onClick={handleLogout}>Logout</button>
+        </div>
+    );
+}
+
+export default Dashboard;
